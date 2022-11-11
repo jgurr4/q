@@ -2,8 +2,11 @@ package com.ple;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
+import database.verticle.CacherVerticle;
+import database.verticle.FileManagerVerticle;
+import io.vertx.rxjava3.core.Vertx;
 
-public class MainVerticle extends AbstractVerticle {
+public class QServer {
 
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
@@ -19,5 +22,8 @@ public class MainVerticle extends AbstractVerticle {
         startPromise.fail(http.cause());
       }
     });
+    vertx.deployVerticle(new HyperBaseVerticle());
+    vertx.deployVerticle(new DatabaseManagerVerticle());
   }
+
 }

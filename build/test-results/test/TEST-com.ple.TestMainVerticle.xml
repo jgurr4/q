@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ple.TestMainVerticle" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-06T22:44:43" hostname="Jeremys-MacBook-Air.local" time="0.176">
+  <properties/>
+  <testcase name="verticle_deployed" classname="com.ple.TestMainVerticle" time="0.176"/>
+  <system-out><![CDATA[HTTP server started on port 8888
+]]></system-out>
+  <system-err><![CDATA[Nov 06, 2022 3:44:43 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+]]></system-err>
+</testsuite>

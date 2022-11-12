@@ -1,4 +1,9 @@
-Hyperbase is the first component we must finish for visur
+Q is made of multiple vital components.
+The first part of it is Hyperbase.
+The second part of it is http/server part. 
+The third part is the backend version of visur
+The fourth part is the web version of visur and then the cli version (maybe work on this in parallel)
+Hyperbase is the first component we must finish, as it is required for visur.
 
 Merging of the idea of application and database, and query engine into a single package. Splunk does the same thing.
 
@@ -18,9 +23,6 @@ git and prometheus are also storing a history. it stores all data across all tim
 you can delete any part of the history you want. You can have automatic garbage collection which deletes history past 3 weeks if you want. Or you can wipe out all the history and preserve only the current state and future history.
 The way garbage collectioni works is it looks for all modifies and delete and removes them as well as past thing they operated on, and keep only the latest version. turning some deletes and modifies into creates for the new database. Then you point users to the new database when it's ready.
 
-The second part of it is http/server part. 
-The third part is the backend version of visur
-The fourth part is the web version of visur and then the cli version (maybe work on this in parallel)
 
 The first record you make you must provide a type, then it creates a table of that type auto
 first table is type 0 which all tables go inside
@@ -54,3 +56,31 @@ Social media -> Delete all Users from admin  -> Query Factory generates a Query 
 VISUR -> Delete all files ending in .txt -> action is performed by terminal since this part is using the terminal multiplexer part of VISUR.
 DB Interface -> Update all records that match "[0-9].*" else delete -> Record Maker validates all existing metrics and creates 'delete all except modify records list' sends immediately to File manager -> File manager validates and appends the modifies and deletes to the database.
 
+
+Arguements for/against Rust Vs. Java/vertx:
+   	Java:								Rust:
+More people know Java						But Rust is gaining popularity fast.
+
+
+pros and cons of VIM vs Helix:
+         HELIX:  									VIM:
+selection -> verb model (Word select, Change)					verb -> selection model (Change Inside Word)
+Written in old C programming language						Written in new Rust programming language
+select entire file with % then s to search and replace/edit all at once		:%s/regex/replace/g is how to do search and replace in vim
+Less configuration options right now.						Many configuration options, but fairly complex to use effectively
+vgl is more keys to delete to end of line					d$ is 1 less keystroke to delete to end of line.
+xd is same number of keys to delete current line				dd same number
+]pd is same number of keys to delete a paragraph				dap same number
+mip is same number of keys to select a paragraph				vip is same number, but you can also do dip which is one less keystroke to delete the paragraph
+allows selecting inside almost any key pair with miKEY				limited to inside () or inside {} etc...
+ALT-. repeats last motion							; repeats last motion
+. repeats last action								. repeats last action
+So far I think Helix uses less hotkeys than vim					VIM basically uses every available hotkey
+Also you almost never have to hit the escape key  				Hitting ESC key constantly
+minor annoyance, you have to move one letter or press ; to remove automatic selections before doing more selections (maybe there is an option to turn this off as soon as you hit 'v'
+I like helixes ability to press ; to turn off current selection but stay in visual mode. In vim you have to hit escape then go back into visual mode again to try it again.
+I like 0 , $ and ^ to go to beginning and end of lines more than helix version doing gl and gh, but maybe that's just bias
+helix doesn't preserve selection when you use 'gb', but I think this is a bug, it should do that.
+I like VIM V better than x for selecting an entire line, and x isn't even real selection mode, because if you try doing any more selections besides x it will not preserve the selection.
+I like helix % for selecting entire document better than vim 'ggvG' and also it's easier for global search and replace. But I like vim ability to show results as you're typing and to highlight all instances, and turn off highlighting with SPACE.
+I like helixes external files search by doing SPACE-/

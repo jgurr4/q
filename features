@@ -1,13 +1,31 @@
 Hyperbase features
 
 Visur features:
- - Inspired by helix, screen, tmux, warp terminal, rust and vim  (Check these programs out to get more ideas)
+ - Inspired by helix, screen, iterm, tmux, warp terminal, rust and vim  (Check these programs out to get more ideas)
  - Study rust, and learn to use it, we may shift over to using rust instead of Java for hyperbase.
 
-Features inspired by helix:
+Features inspired by 
+helix:
  - auto-complete : commands inside editor
  - tutorial helper popup windows that show a list of possible commands
  - file picker which shows you contents of files you are browsing, and is very fast.
+ - tutorial mode: visur --tutor
+ - multi-cursor mode. (create more cursors with (,) then edit multiple lines at once, then do (c) to remove extra cursors. This is easier than CTRL-v
+ - multi-selector mode. (select in visual mode, then search for specific string or regex and hit enter then it removes all from selection except for the matched strings. Then edit them all at same time.
 
 warp:
+ - command blocks (and ability to bookmark or copy various parts of them)
+ - command prompt always visible on bottom of screen
  -
+
+iterm:
+ - selection auto-copied into primary clipboard
+ - terminal macros
+
+screen/tmux:
+ - ability to make multiple screens/tabs
+ - ability to move and select/copy things in terminal with vim hotkeys
+ - ability to have multiple ssh tabs for same remote server and start a session in one that is continued or worked on or viewed from another tab.
+ 
+vim: 
+ - everything else

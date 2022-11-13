@@ -84,3 +84,6 @@ helix doesn't preserve selection when you use 'gb', but I think this is a bug, i
 I like VIM V better than x for selecting an entire line, and x isn't even real selection mode, because if you try doing any more selections besides x it will not preserve the selection.
 I like helix % for selecting entire document better than vim 'ggvG' and also it's easier for global search and replace. But I like vim ability to show results as you're typing and to highlight all instances, and turn off highlighting with SPACE.
 I like helixes external files search by doing SPACE-/
+helix has an option to (d)elete or (c)hange selection without overwriting the yanked clipboard registry. ALT+d or ALT+c
+Helix is not as good as netrw when it comes to exploring the entire file system. It only lets you see current working directory.
+Both vim and helix require compiling with +clipboard option in order to yank to system clipboard which is not default on most systems.

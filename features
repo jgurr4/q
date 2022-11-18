@@ -12,6 +12,9 @@ helix:
  - tutorial mode: visur --tutor
  - multi-cursor mode. (create more cursors with (,) then edit multiple lines at once, then do (c) to remove extra cursors. This is easier than CTRL-v
  - multi-selector mode. (select in visual mode, then search for specific string or regex and hit enter then it removes all from selection except for the matched strings. Then edit them all at same time.
+ - Being able to see a few lines below and above cursor when moving it to bottom or top of screen so that you can see things around cursor better.
+
+
 
 warp:
  - command blocks (and ability to bookmark or copy various parts of them)

@@ -1,0 +1,34 @@
+RUST TIPS:
+Generate a new project which initializes with git and generates .gitignore:
+  - cargo new project-name
+
+Build the project (cd to the directory first)
+ - cargo build
+
+compile a file (only if you didn't use cargo already)
+ - rustc filename.rs
+
+run a compiled file:
+ - ./target/debug/filename
+
+Build and run a file using cargo at same time:
+ - cargo run
+
+Check that the file compiles correctly without generating a binary:
+ - cargo check
+
+Compile a project for release in production: (Builds with optimizations)
+ - cargo build --release
+
+Run tests:
+ - cargo test
+
+Create a new package inside current:
+ - mkdir foo && cd foo
+ - cargo init .
+
+Get help for specific cargo commands:
+ - cargo help clean
+
+Search for packages:
+ - cargo search <package-name>

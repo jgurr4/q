@@ -1,8 +1,11 @@
 Hyperbase features
 
 Visur features:
- - Inspired by helix, screen, iterm, tmux, warp terminal, rust and vim  (Check these programs out to get more ideas)
+ - Inspired by obsidian, helix, screen, iterm, tmux, warp terminal, rust and vim  (Check these programs out to get more ideas)
  - Study rust, and learn to use it, we may shift over to using rust instead of Java for hyperbase.
+ - Navigation Mode will be the default mode in visur. Because most of the time you are not editing files you are reading them, then when you need to edit, switch to edit mode and then you can do all the normal vim/helix commands
+ - Contexts mode (Idea) basically you change between character, word, sentence and paragraph mode. Default is character, for example if you are in paragraph mode you can move with hjkl normally would go by character, but in this mode goes by paragraph. Also any actions you take works on paragraphs, like instead of highlighting to delete, you just use 'd' while inside the paragraph and it will work. or yank. In total there are these: character, word, WORD, line, sentence, paragraph, page (what you see on screen), document, package/folder, project. They will be mapped to keys 0-9. and [ and ] will let you shift to different contexts.  Users can define more contexts as well.
+ - Ability to have 2 sided cursor around selection to expand or shrink it as needed.
 
 Features inspired by 
 helix:
@@ -13,6 +16,7 @@ helix:
  - multi-cursor mode. (create more cursors with (,) then edit multiple lines at once, then do (c) to remove extra cursors. This is easier than CTRL-v
  - multi-selector mode. (select in visual mode, then search for specific string or regex and hit enter then it removes all from selection except for the matched strings. Then edit them all at same time.
  - Being able to see a few lines below and above cursor when moving it to bottom or top of screen so that you can see things around cursor better.
+ - being able to always be in selection mode. Then visual mode is extended visual mode. Except ours will let you remove selection with escape
 
 
 
@@ -32,3 +36,9 @@ screen/tmux:
  
 vim: 
  - everything else
+
+obsidian:
+ - Ability to create fantastic notes.
+
+neo4j: 
+ - Ability to organize notes or files into nodes with relations.

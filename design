@@ -87,3 +87,6 @@ I like helixes external files search by doing SPACE-/
 helix has an option to (d)elete or (c)hange selection without overwriting the yanked clipboard registry. ALT+d or ALT+c
 Helix is not as good as netrw when it comes to exploring the entire file system. It only lets you see current working directory.
 Both vim and helix require compiling with +clipboard option in order to yank to system clipboard which is not default on most systems.
+ALT-; will move cursor to other side of selection
+
+

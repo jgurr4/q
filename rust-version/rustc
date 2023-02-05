@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -it --rm --workdir="/host" -v $PWD/:/host rust:1.65 rustc $@
